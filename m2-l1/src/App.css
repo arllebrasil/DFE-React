@@ -1,0 +1,53 @@
+.App{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: darkblue;
+  color: white;
+}
+
+.App > div{
+  margin-top: 1.4rem;
+}
+
+.calc div,button,h2{
+  margin-top: 1.2rem;
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.calc div{
+  display: flex;
+  justify-content: space-around;
+}
+
+.calc input{
+  width: 36%;
+  font-size: 2rem;
+  padding: .8rem;
+  background-color: powderblue;
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+
+.calc button{
+  width: clamp(30%, 120px, 40%);
+  height: 68px;
+  border-radius: 4px 34px 4px 34px;
+  color: white;
+  font-size: 2.4rem;
+  background-color: mediumblue;
+  border: none;
+}
+
+.calc h2{
+  font-size: 2rem;
+}

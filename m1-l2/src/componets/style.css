@@ -1,0 +1,40 @@
+.search-container{
+    height: 2.2em;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container input{
+    flex:3;
+    border-radius: 2.2em 0px 0px 2.2em;
+    border: 1px solid cornflowerblue;
+    padding: 0 16px;
+    font-size: 16px;
+}
+
+.search-container input:focus{
+    outline: none;
+    border: 1px solid none;
+}
+
+.search-container button{
+    flex:1;
+    border-radius: 0 2.2em 2.2em 0;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: bold;
+    padding: auto 6%;
+}
+
+.card{
+    padding: 18px;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(100, 148, 237, 0.5);
+}
+
+.card p::after{
+    content: '';
+}

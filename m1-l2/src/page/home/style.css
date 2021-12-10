@@ -1,0 +1,25 @@
+.main{
+    width: 100%;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px;
+}
+
+.content div{
+    width: 100%;
+    max-width: 580px;
+}
+
+.content ul{ 
+    width: 100%;
+    max-width: 580px;
+}
+
+.content ul li{ 
+    margin-bottom: 12px;
+}
