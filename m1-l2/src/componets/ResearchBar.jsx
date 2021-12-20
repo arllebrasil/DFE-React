@@ -8,10 +8,13 @@ class ResearchBar extends React.Component {
     }
 
     render() {
-        return (<div className="search-container">
-            <input onChange={this.props.changeCallBack || console.log} type="text" />
-            <button onClick={this.props.submitCallBack}>Search</button>
-        </div>);
+        return (
+            <form onSubmit={this.props.submitCallBack} >
+                <div className="search-container">
+                    <input onChange={this.props.changeCallBack || console.log} type="text" />
+                    <button type='submit' ><span className='fa fa-search'></span> Search</button>
+                </div>
+            </form>);
     }
 }
 

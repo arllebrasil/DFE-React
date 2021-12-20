@@ -1,7 +1,7 @@
 import React from 'react';
 import api from '../../config/api';
 import ResearchBar from '../../componets/ResearchBar';
-import ListView  from  '../../componets/ListView';
+import ListView from '../../componets/ListView';
 import './style.css'
 
 class HomePage extends React.Component {
@@ -12,12 +12,17 @@ class HomePage extends React.Component {
         this.searchHandle = this.searchHandle.bind(this);
     }
 
+    componentDidMount() {
+        this.searchHandle();
+    }
+
     hitsQueryChange(event) {
         let { value } = event.target;
         this.setState({ hitsQuery: value });
     }
 
-    async searchHandle() {
+    async searchHandle(event) {
+        event?.preventDefault();
         const { hitsQuery } = this.state;
         const response = await api.get('search', {
             params: {
@@ -33,11 +38,15 @@ class HomePage extends React.Component {
         return (
             <main className="main">
                 <div className="content">
+                    <h1>{this.props.title}</h1>
                     <ResearchBar
                         changeCallBack={this.hitsQueryChange}
                         submitCallBack={this.searchHandle} />
-                    <h1>{this.state.hits.length}</h1>
-                    <ListView itens={this.state.hits} />            
+
+                    {this.state.hits.length > 0 ?
+                        <ListView itens={this.state.hits} /> :
+                        <span> Nenhum resultado encontrado para : {this.state.hitsQuery}</span>
+                    }
                 </div>
             </main>);
     }

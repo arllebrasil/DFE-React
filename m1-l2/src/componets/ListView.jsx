@@ -15,9 +15,9 @@ class ListView extends React.Component {
                 {this.props.itens.map(
                     (item) => (<li key={item.objectID}>
                         <div className="card">
-                            <p>{item.author}</p>
-                            <p>{item.title}</p>
-                            {item.link && <a href={item.url}>link</a>}
+                            <p><span className='fas fa-user-alt'></span> : {item.author}</p>
+                            <p><span className='fa fa-book'></span> : {item.title}</p>                      
+                            <span><i className="fas fa-link"></i></span> : {item.url && <a href={item.url}>link</a>}
                         </div>
                     </li>),
                 )

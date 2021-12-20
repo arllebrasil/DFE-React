@@ -1,5 +1,5 @@
 .main{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -8,11 +8,6 @@
     flex-direction: column;
     align-items: center;
     padding: 28px;
-}
-
-.content div{
-    width: 100%;
-    max-width: 580px;
 }
 
 .content ul{ 

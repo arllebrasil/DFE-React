@@ -9,7 +9,7 @@ class App extends React.Component {
 
     render() {
         return (<div>
-            <HomePage />
+            <HomePage title={this.props.title}/>
         </div>);
     }
 }
