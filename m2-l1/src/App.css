@@ -10,7 +10,7 @@
 }
 
 .App > div{
-  margin-top: 1.4rem;
+  margin: 1.4em auto;
 }
 
 .calc div,button,h2{
@@ -32,8 +32,8 @@
   width: 36%;
   font-size: 2rem;
   padding: .8rem;
-  background-color: powderblue;
-  color: white;
+  background-color: azure;
+  color: black;
   border-radius: 4px;
   border: none;
 }
